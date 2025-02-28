@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <title>Rikyu Douka</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #quote-container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-image: url('resource/bg.png');
+            width: 185px ;
+            height: 200px;
+            position: relative;
+        }
+        #uta {
+            line-height: 2.3;
+            padding-top: 10px;
+            font-family: "Sawarabi Mincho", "Times New Roman", serif;
+            font-size: 16px;
+        }
+        #prev-btn {
+            position: absolute;
+            bottom: 10px;
+            left: 95px;
+            width: 18px;
+            height: 18px;
+            background: url('resource/prev.png') no-repeat center center;
+            background-size: contain;
+            border: none;
+            cursor: pointer;
+        }
+        #next-btn {
+            position: absolute;
+            bottom: 10px;
+            left: 115px;
+            width: 18px;
+            height: 18px;
+            background: url('resource/next.png') no-repeat center center;
+            background-size: contain;
+            border: none;
+            cursor: pointer;
+        }
+        #refresh-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            background: url('resource/refresh.png') no-repeat center center;
+            background-size: contain;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="quote-container">
+        <p id="no"></p>
+        <p id="uta">
+            <ruby>
+                <span id="original"></span>
+                <rt id="furigana"></rt>
+            </ruby>
+        </p>
+        <button id="prev-btn" title="prev"></button>
+        <button id="next-btn" title="next"></button>
+        <button id="refresh-btn" title="refresh"></button>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
